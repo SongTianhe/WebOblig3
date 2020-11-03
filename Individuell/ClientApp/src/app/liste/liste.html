@@ -1,2 +1,13 @@
+<div class="container">
+  <h1>Hallo verden</h1>
+  <div>
+    <div class="col-md-12">
+      <div *ngIf="laster">Laster FAQ list.....</div>
+      <div class="well" *ngFor="let tema of allTema">
+        <span>{{tema.tema}}</span>
+        <ul></ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>Hallo verden</h1>

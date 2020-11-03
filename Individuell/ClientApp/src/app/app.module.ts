@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { Liste } from './liste/liste';
 import { Meny } from './meny/meny';
+import { Ny } from './ny/ny';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -11,11 +13,13 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     Liste,
-    Meny
+    Meny,
+    Ny
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

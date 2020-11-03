@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Liste } from './liste/liste';
+import { Ny } from './ny/ny';
 
 const appRoots: Routes = [
   { path: 'liste', component: Liste },
+  { path: 'ny', component: Ny },
   { path: '', redirectTo: 'liste', pathMatch: 'full' }
 ]
 
