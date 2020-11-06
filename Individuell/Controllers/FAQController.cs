@@ -1,4 +1,5 @@
 ﻿using Individuell.DAL;
+using Individuell.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -27,6 +28,24 @@ namespace Individuell.Controllers
         {
             List<FAQ> hentAlle = await _db.HentTema();
             return Ok(hentAlle);// returnerer alltid OK, null ved tom DB
+        }
+
+        
+        [HttpGet("{id}")]
+        public async Task<ActionResult> HentSpm(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                var temaen = await _db.HentSpm(id);
+                if (temaen == null)
+                {
+                    _log.LogInformation("Fant ikke kunden");
+                    return NotFound();
+                }
+                return Ok(temaen);
+            }
+            _log.LogInformation("Feil i inputvalidering");
+            return BadRequest();
         }
     }
 }

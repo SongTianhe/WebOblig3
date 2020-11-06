@@ -1,0 +1,9 @@
+<div class="container p-3 col-md-8">
+  <h1>Her er alle sprøsmål til </h1>{{alleSpm.tema}}
+  <div>
+    <div *ngIf="laster">Laster FAQ list.....</div>
+    <div *ngFor="let spm of alleSpm" class="container p-3 my-3 border">
+      <a [routerLink]="">{{spm.question}}</a>
+    </div>
+  </div>
+</div>

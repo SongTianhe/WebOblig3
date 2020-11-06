@@ -1,13 +1,19 @@
-<div class="container">
-  <h1>Hallo verden</h1>
-  <div>
-    <div class="col-md-12">
-      <div *ngIf="laster">Laster FAQ list.....</div>
-      <div class="well" *ngFor="let tema of allTema">
-        <span>{{tema.tema}}</span>
-        <ul></ul>
-      </div>
+<div class="container p-3 col-md-8">
+  <h1>FAQ list :</h1>
+  <h3>Her kan du finn alle FAQ til ulike funksjoner</h3>
+  <div *ngIf="visTema">
+    <div *ngIf="laster">Laster FAQ list.....</div>
+    <div *ngFor="let tema of allTema" class="container p-3 my-3 border">
+      <!--<a [routerLink]="['/spmList',tema.id]">{{tema.tema}}</a>-->
+      <h6 (click)="temaSelect(tema.id)">{{tema.tema}}</h6>
     </div>
+    <div class="container p-3 my-3 border">
+      <h6>Finner ikke det du lurt om ?</h6>
+      <a routerLink="/ny">Send Inn nye spørsmål</a>
+    </div>
+  </div>
+  <div *ngFor="let spm of allSpm">
+    <h6>{{spm.svar}}</h6>
   </div>
 </div>
 

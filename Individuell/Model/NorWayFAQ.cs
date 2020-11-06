@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Individuell.Model
 {
-    public class FAQ
+    public class NorWayFAQ
     {
         public int Id { get; set; }
         public string Tema { get; set; }

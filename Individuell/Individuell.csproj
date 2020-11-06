@@ -33,14 +33,20 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\app-routing.module.ts" />
+    <None Remove="ClientApp\src\app\billett\billett.ts" />
     <None Remove="ClientApp\src\app\FAQ.ts" />
     <None Remove="ClientApp\src\app\liste\liste.ts" />
     <None Remove="ClientApp\src\app\meny\meny.ts" />
     <None Remove="ClientApp\src\app\ny\ny.ts" />
+    <None Remove="ClientApp\src\app\spmList\spmList.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\meny\meny.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
