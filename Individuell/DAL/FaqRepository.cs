@@ -58,18 +58,19 @@ namespace Individuell.DAL
                 FAQ temaen = await _db.FAQer.FindAsync(id);
                 List<NorWayFAQ> alleSpm = new List<NorWayFAQ>();
 
-                foreach (var spm in temaen.Sporsmaler)
-                {
-                    var enSpm = new NorWayFAQ()
+                    foreach (var spm in temaen.Sporsmaler)
                     {
-                        Tema = temaen.Tema,
-                        Question = spm.Question,
-                        Svar = spm.Svar,
-                        Positiv = spm.Positiv,
-                        Negativ = spm.Negativ
-                    };
-                    alleSpm.Add(enSpm);
-                }
+                        var enSpm = new NorWayFAQ()
+                        {
+                            Id = spm.SId,
+                            Tema = temaen.Tema,
+                            Question = spm.Question,
+                            Svar = spm.Svar,
+                            Positiv = spm.Positiv,
+                            Negativ = spm.Negativ
+                        };
+                        alleSpm.Add(enSpm);
+                    }
 
                 return alleSpm;
 

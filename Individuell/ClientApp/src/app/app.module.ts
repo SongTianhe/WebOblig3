@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { Liste } from './liste/liste';
 import { Meny } from './meny/meny';
 import { Ny } from './ny/ny';
-import { Billett } from './billett/billett';
+import { SpmList } from './spmList/spmList';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -17,7 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     Liste,
     Meny,
     Ny,
-    Billett
+    SpmList
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
