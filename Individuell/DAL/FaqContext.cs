@@ -26,13 +26,14 @@ namespace Individuell.DAL
         public int Negativ { get; set; }
     }
 
-    public class Kontakt
+    public class Kontakter
     {
         [Key]
         public int KId { get; set; }
-        public string Melding { get; set; }
+        public string Fornavn { get; set; }
+        public string Etternavn { get; set; }
         public string Epost { get; set; }
-        public string Navn { get; set; }
+        public string Melding { get; set; }
     }
 
     public class FaqContext : DbContext
@@ -45,7 +46,7 @@ namespace Individuell.DAL
 
         public DbSet<FAQ> FAQer { get; set; }
         public DbSet<Sporsmal> Sporsmaler { get; set; }
-        public DbSet<Kontakt> Kontakter { get; set; }
+        public DbSet<Kontakter> Kontakter { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

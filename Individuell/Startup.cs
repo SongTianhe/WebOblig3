@@ -26,7 +26,7 @@ namespace Individuell
             services.AddControllers();
 
             services.AddDbContext<FaqContext>(options =>
-                            options.UseSqlite("Data Source=Kunde.db"));
+                            options.UseSqlite("Data Source=FAQ.db"));
             services.AddScoped<IFaqRepository, FaqRepository>();
 
             // In production, the Angular files will be served from this directory
@@ -37,13 +37,13 @@ namespace Individuell
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 //DBInit.Seed(app);
-                //LoggerFactory.AddFile("Logs/FaqLog.txt");
+                loggerFactory.AddFile("Logs/FaqLog.txt");
             }
             else
             {

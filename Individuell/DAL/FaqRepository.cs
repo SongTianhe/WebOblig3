@@ -73,19 +73,33 @@ namespace Individuell.DAL
                     }
 
                 return alleSpm;
-
-                /*
-                List<Sporsmal> alleSpm = await _db.Sporsmaler.ToListAsync();
-
-                var finnSpm = (from spm in alleSpm
-                               where spm.SId == id
-                               select spm).ToList();
-
-                return finnSpm;*/
             }
             catch
             {
                 return null;
+            }
+        }
+
+        public async Task<bool> LagreMelding(Kontakt innMelding)
+        {
+            try
+            {
+                var nyMelding = new Kontakter()
+                {
+                    Fornavn = innMelding.Fornavn,
+                    Etternavn = innMelding.Etternavn,
+                    Epost = innMelding.Epost,
+                    Melding = innMelding.Melding
+                };
+
+                _db.Kontakter.Add(nyMelding);
+                await _db.SaveChangesAsync();
+
+                return true;
+
+            }catch
+            {
+                return false;
             }
         }
     }

@@ -47,5 +47,22 @@ namespace Individuell.Controllers
             _log.LogInformation("Feil i inputvalidering");
             return BadRequest();
         }
+
+        [HttpPost]
+        public async Task<ActionResult> LagreMelding(Kontakt innMelding)
+        {
+            if (ModelState.IsValid)
+            {
+                bool returnOK = await _db.LagreMelding(innMelding);
+                if (!returnOK)
+                {
+                    _log.LogInformation("Meldingen kan ikke lagres!");
+                    return BadRequest();
+                }
+                return Ok();
+            }
+            _log.LogInformation("Feil i inputvalidering");
+            return BadRequest();
+        }
     }
 }

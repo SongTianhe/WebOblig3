@@ -27,6 +27,7 @@ export class SpmList {
     this.http.get<FAQ[]>("api/FAQ/" + id)
       .subscribe(spm => {
         this.allSpm = spm;
+        this.laster = false;
       },
         error => console.log(error)
       );

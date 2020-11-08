@@ -1,7 +1,10 @@
 <div class="container p-3 col-md-8">
-  <h1>Her er alle sprøsmål til temaen</h1>
   <div *ngIf="!select">
-    <div *ngIf="laster">Laster sprøsmål list.....</div>
+    <h1>Her er alle sprøsmål til temaen</h1>
+    <div *ngIf="laster">
+      <span class="spinner-border spinner-border-sm text-warning"></span>
+      <span style="margin-left:10px" class="text-warning">Laster sprøsmål list.....</span>
+    </div>
     <div class="container p-3 my-3 border">
       <div *ngFor="let spm of allSpm">
         <p (click)="spmSelect(spm.id)">{{spm.question}}</p>
@@ -11,7 +14,10 @@
   <div *ngIf="select" class="container p-3 my-3 border">
     <div *ngFor="let spm of allSpm">
       <div *ngIf="spm.id == selectId">
-        <p>{{spm.question}}</p>
+        <h5>{{spm.question}}</h5>
+        <span>{{spm.svar}}</span>
+        <span>{{spm.positiv}}</span>
+        <span>{{spm.negativ}}</span>
       </div>
     </div>
   </div>
