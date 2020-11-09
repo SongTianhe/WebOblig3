@@ -1,0 +1,73 @@
+2020-11-09T00:00:41.8154263+01:00  [ERR] ERROR in app/spmList/spmList.ts:44:30 - error TS1005: ',' expected.
+
+44     const increase = (number)like.textContent;
+                                ~~~~
+app/spmList/spmList.ts:44:34 - error TS1005: ',' expected.
+
+44     const increase = (number)like.textContent;
+                                    ~
+
+ (224d8b30)
+2020-11-09T00:00:42.6435320+01:00  [ERR]     ERROR in src/app/spmList/spmList.ts(42,26): error TS2300: Duplicate identifier 'like'.
+    src/app/spmList/spmList.ts(44,23): error TS2693: 'number' only refers to a type, but is being used as a value here.
+    src/app/spmList/spmList.ts(44,30): error TS2300: Duplicate identifier 'like'.
+    
+ (323090d1)
+2020-11-09T00:37:40.0353920+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-09T00:37:40.2176508+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-09T00:37:40.2207121+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-09T00:39:42.1038924+01:00 80000018-0001-fb00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.TimeoutException: The Angular CLI process did not start listening for requests within the timeout period of 0 seconds. Check the log output for error information.
+   at Microsoft.AspNetCore.SpaServices.Extensions.Util.TaskTimeoutExtensions.WithTimeout[T](Task`1 task, TimeSpan timeoutDelay, String message)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-09T00:41:00.2025098+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-09T00:41:00.7918496+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-09T00:41:00.7941276+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-09T00:46:14.1870850+01:00 80000078-0000-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Net.WebSockets.WebSocketException (0x80004005): The WebSocket is in an invalid state ('Aborted') for this operation. Valid states are: 'Open, CloseReceived'
+   at System.Net.WebSockets.WebSocketValidate.ThrowIfInvalidState(WebSocketState currentState, Boolean isDisposed, WebSocketState[] validStates)
+   at System.Net.WebSockets.ManagedWebSocket.CloseOutputAsyncCore(WebSocketCloseStatus closeStatus, String statusDescription, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PumpWebSocket(WebSocket source, WebSocket destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.AcceptProxyWebSocketRequest(HttpContext context, Uri destinationUri, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-11-09T00:46:14.1927948+01:00 80000078-0000-fc00-b63f-84710c7967bb [WRN] The response has already started, the error page middleware will not be executed. (e1dd4c0d)
+2020-11-09T00:46:14.4576317+01:00 80000078-0000-fc00-b63f-84710c7967bb [ERR] Connection ID ""18158513699168452727"", Request ID ""80000078-0000-fc00-b63f-84710c7967bb"": An unhandled exception was thrown by the application. (bf316047)
+System.Net.WebSockets.WebSocketException (0x80004005): The WebSocket is in an invalid state ('Aborted') for this operation. Valid states are: 'Open, CloseReceived'
+   at System.Net.WebSockets.WebSocketValidate.ThrowIfInvalidState(WebSocketState currentState, Boolean isDisposed, WebSocketState[] validStates)
+   at System.Net.WebSockets.ManagedWebSocket.CloseOutputAsyncCore(WebSocketCloseStatus closeStatus, String statusDescription, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PumpWebSocket(WebSocket source, WebSocket destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.AcceptProxyWebSocketRequest(HttpContext context, Uri destinationUri, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-11-09T00:48:49.0460021+01:00 8000005c-0004-fe00-b63f-84710c7967bb [INF] Endring av rating kunne ikke utføres! (a10183c1)
+2020-11-09T01:02:06.9432240+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-09T01:02:06.9778734+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-09T01:02:06.9818376+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-09T10:07:38.8665205+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-09T10:07:38.9039663+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-09T10:07:38.9063877+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-09T10:09:41.1997208+01:00 80000002-0003-ff00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.TimeoutException: The Angular CLI process did not start listening for requests within the timeout period of 0 seconds. Check the log output for error information.
+   at Microsoft.AspNetCore.SpaServices.Extensions.Util.TaskTimeoutExtensions.WithTimeout[T](Task`1 task, TimeSpan timeoutDelay, String message)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-09T10:10:16.8238977+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-09T10:10:16.8513038+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-09T10:10:16.8543081+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-09T10:23:56.7226872+01:00  [ERR]     ERROR in src/app/spmList/spmList.ts(64,27): error TS2339: Property 'refresh' does not exist on type 'Location'.
+    
+ (3d687666)

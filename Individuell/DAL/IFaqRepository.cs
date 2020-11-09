@@ -13,5 +13,7 @@ namespace Individuell.DAL
         Task<List<NorWayFAQ>> HentSpm(int id);
 
         Task<bool> LagreMelding(Kontakt innMelding);
+
+        Task<bool> Rating(NorWayFAQ endreRating);
     }
 }

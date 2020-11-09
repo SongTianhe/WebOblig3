@@ -53,3 +53,44 @@ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updatin
 2020-11-08T20:44:55.8618244+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
 2020-11-08T20:44:55.8893008+01:00  [INF] Hosting environment: "Development" (c3307c92)
 2020-11-08T20:44:55.8921541+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-08T21:25:38.9829280+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-08T21:25:39.2005863+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-08T21:25:39.2030056+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-08T21:56:12.9352150+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-08T21:56:12.9539675+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-08T21:56:12.9568947+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-08T22:00:59.9281009+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-08T22:00:59.9593575+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-08T22:00:59.9640239+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-08T23:48:53.0671301+01:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-08T23:48:53.5739280+01:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-08T23:48:53.5767311+01:00  [INF] Content root path: "C:\Users\lcz\Desktop\school\WebApplication\Individuell\Individuell" (b5d60022)
+2020-11-08T23:55:27.6961545+01:00 8000000c-0001-fc00-b63f-84710c7967bb [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+System.Net.WebSockets.WebSocketException (0x80004005): The WebSocket is in an invalid state ('Aborted') for this operation. Valid states are: 'Open, CloseReceived'
+   at System.Net.WebSockets.WebSocketValidate.ThrowIfInvalidState(WebSocketState currentState, Boolean isDisposed, WebSocketState[] validStates)
+   at System.Net.WebSockets.ManagedWebSocket.CloseOutputAsyncCore(WebSocketCloseStatus closeStatus, String statusDescription, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PumpWebSocket(WebSocket source, WebSocket destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.AcceptProxyWebSocketRequest(HttpContext context, Uri destinationUri, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-11-08T23:55:27.7077175+01:00 8000000c-0001-fc00-b63f-84710c7967bb [WRN] The response has already started, the error page middleware will not be executed. (e1dd4c0d)
+2020-11-08T23:55:27.7944979+01:00 8000000c-0001-fc00-b63f-84710c7967bb [ERR] Connection ID ""18158513703463419915"", Request ID ""8000000c-0001-fc00-b63f-84710c7967bb"": An unhandled exception was thrown by the application. (bf316047)
+System.Net.WebSockets.WebSocketException (0x80004005): The WebSocket is in an invalid state ('Aborted') for this operation. Valid states are: 'Open, CloseReceived'
+   at System.Net.WebSockets.WebSocketValidate.ThrowIfInvalidState(WebSocketState currentState, Boolean isDisposed, WebSocketState[] validStates)
+   at System.Net.WebSockets.ManagedWebSocket.CloseOutputAsyncCore(WebSocketCloseStatus closeStatus, String statusDescription, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PumpWebSocket(WebSocket source, WebSocket destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.AcceptProxyWebSocketRequest(HttpContext context, Uri destinationUri, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.SpaServices.Extensions.Proxy.SpaProxy.PerformProxyRequest(HttpContext context, HttpClient httpClient, Task`1 baseUriTask, CancellationToken applicationStoppingToken, Boolean proxy404s)
+   at Microsoft.AspNetCore.Builder.SpaProxyingExtensions.<>c__DisplayClass2_0.<<UseProxyToSpaDevelopmentServer>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+2020-11-08T23:55:29.4749563+01:00  [ERR]     ERROR in src/app/spmList/spmList.ts(45,22): error TS2339: Property 'textContent' does not exist on type 'number'.
+    
+ (792a376d)
+2020-11-08T23:59:14.7531530+01:00  [ERR]     ERROR in src/app/spmList/spmList.ts(46,17): error TS2588: Cannot assign to 'increase' because it is a constant.
+    
+ (0facb099)

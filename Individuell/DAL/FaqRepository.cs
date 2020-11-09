@@ -102,5 +102,25 @@ namespace Individuell.DAL
                 return false;
             }
         }
+
+        public async Task<bool> Rating(NorWayFAQ endreRating)
+        {
+            try
+            {
+                var endreObjekt = await _db.Sporsmaler.FindAsync(endreRating.Id);
+
+                endreObjekt.Positiv = endreRating.Positiv;
+                endreObjekt.Negativ = endreRating.Negativ;
+
+                await _db.SaveChangesAsync();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

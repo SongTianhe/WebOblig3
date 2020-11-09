@@ -64,5 +64,17 @@ namespace Individuell.Controllers
             _log.LogInformation("Feil i inputvalidering");
             return BadRequest();
         }
+
+        [HttpPut]
+        public async Task<ActionResult> Rating(NorWayFAQ endreRating)
+        {
+            bool returnOK = await _db.Rating(endreRating);
+            if (!returnOK)
+            {
+                _log.LogInformation("Endring av rating kunne ikke utføres!");
+                return NotFound();
+            }
+            return Ok();
+        }
     }
 }

@@ -37,4 +37,39 @@ export class SpmList {
     this.select = true;
     this.selectId = id;
   }
+
+ 
+  rating(id: number, positiv: number, negativ:number, type: string) {
+    const endreLike = new FAQ();
+
+    if (type == "like") {
+      const nyTall = positiv + 1;
+
+      endreLike.id = id;
+      endreLike.positiv = nyTall;
+      endreLike.negativ = negativ;
+    }
+    else if (type == "dislike") {
+      const nyTall = negativ + 1;
+
+      endreLike.id = id;
+      endreLike.positiv = positiv;
+      endreLike.negativ = nyTall;
+    }
+
+    this.http.put("api/FAQ/", endreLike)
+      .subscribe(
+        retur => {
+          console.log("ok")
+          //this.router.navigate(['/spmList', id]);
+          this.ngOnInit();
+        },
+        error => console.log(error)
+      );
+    //const increase = like.textContent;
+    //const newnumber = increase + 1;
+    //console.log(positiv + 1)
+
+
+  }
 }
