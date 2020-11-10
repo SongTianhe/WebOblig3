@@ -8,6 +8,7 @@ import { Liste } from './liste/liste';
 import { Meny } from './meny/meny';
 import { Ny } from './ny/ny';
 import { SpmList } from './spmList/spmList';
+import { AlleKontakt } from './alleKontakt/alleKontakt';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -18,7 +19,8 @@ import { AppRoutingModule } from './app-routing.module';
     Liste,
     Meny,
     Ny,
-    SpmList
+    SpmList,
+    AlleKontakt
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

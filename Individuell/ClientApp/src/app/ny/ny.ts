@@ -30,7 +30,6 @@ export class Ny {
   }
 
   vedSubmit() {
-    console.log("OK");
     this.lagreMelding();
   }
 
@@ -43,9 +42,9 @@ export class Ny {
     lagretMelding.epost = this.skjema.value.epost;
     lagretMelding.melding = this.skjema.value.melding;
 
-    this.http.post("api/FAQ", lagretMelding)
+    this.http.post("api/Kontakt", lagretMelding)
       .subscribe(retur => {
-        this.router.navigate(['/liste']);
+        this.router.navigate(['/alleKontakt']);
       },
         error => console.log(error)
       );

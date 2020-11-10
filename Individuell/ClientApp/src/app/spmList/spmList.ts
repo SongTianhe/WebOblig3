@@ -62,7 +62,7 @@ export class SpmList {
         retur => {
           console.log("ok")
           //this.router.navigate(['/spmList', id]);
-          this.ngOnInit();
+          //this.ngOnInit();
         },
         error => console.log(error)
       );

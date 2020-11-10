@@ -48,22 +48,6 @@ namespace Individuell.Controllers
             return BadRequest();
         }
 
-        [HttpPost]
-        public async Task<ActionResult> LagreMelding(Kontakt innMelding)
-        {
-            if (ModelState.IsValid)
-            {
-                bool returnOK = await _db.LagreMelding(innMelding);
-                if (!returnOK)
-                {
-                    _log.LogInformation("Meldingen kan ikke lagres!");
-                    return BadRequest();
-                }
-                return Ok();
-            }
-            _log.LogInformation("Feil i inputvalidering");
-            return BadRequest();
-        }
 
         [HttpPut]
         public async Task<ActionResult> Rating(NorWayFAQ endreRating)

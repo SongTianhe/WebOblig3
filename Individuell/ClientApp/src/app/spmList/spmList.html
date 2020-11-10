@@ -5,9 +5,12 @@
       <span class="spinner-border spinner-border-sm text-warning"></span>
       <span style="margin-left:10px" class="text-warning">Laster sprøsmål list.....</span>
     </div>
-    <div class="container p-3 my-3 border">
-      <div *ngFor="let spm of allSpm">
-        <p (click)="spmSelect(spm.id)">{{spm.question}}</p>
+    <div *ngFor="let spm of allSpm" class="container p-3 my-3 border">
+      <div><h6 class="text-primary" (click)="spmSelect(spm.id)">{{spm.question}}</h6></div>
+      <div class="alert alert-info">
+        <h6>Rating av spørsmålen :</h6>
+        <strong>Like: </strong>{{spm.positiv}}
+        <strong>Disike: </strong>{{spm.negativ}}
       </div>
     </div>
   </div>
@@ -16,13 +19,13 @@
       <div *ngIf="spm.id == selectId">
         <div class="container p-3 my-3 border">
           <h5>{{spm.question}}</h5>
-          <span>{{spm.svar}}</span>
+          <span [innerHTML]="spm.svar"></span>
         </div>
         <div class="container p-3 my-3 border">
           <h5>Er dette svaret nyttig for deg?</h5>
           <div>
             <button (click)="rating(spm.id,spm.positiv,spm.negativ,'like')" class="btn btn-success">Like</button>
-            <span #like>{{spm.positiv}}</span>
+            <span>{{spm.positiv}}</span>
           </div>
           <div>
             <button (click)="rating(spm.id,spm.positiv,spm.negativ,'dislike')" class="btn btn-danger">Dislike</button>

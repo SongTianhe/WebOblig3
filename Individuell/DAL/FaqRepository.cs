@@ -23,26 +23,7 @@ namespace Individuell.DAL
                 
                 List<FAQ> alleTema = await _db.FAQer.ToListAsync();
                 return alleTema;
-                /*
-                List<FAQ> alleTema = await _db.FAQer.ToListAsync();
-                List<NorWayFAQ> alleSpm = new List<NorWayFAQ>();
-                foreach(var tema in alleTema)
-                {
-                    foreach (var spm in tema.Sporsmaler)
-                    {
-                        var enSpm = new NorWayFAQ()
-                        {
-                            Id = tema.Id,
-                            Tema = tema.Tema,
-                            Question = spm.Question,
-                            Svar = spm.Svar,
-                            Positiv = spm.Positiv,
-                            Negativ = spm.Negativ
-                        };
-                        alleSpm.Add(enSpm);
-                    }
-                }
-                return alleSpm;*/
+
             }
             catch
             {
@@ -119,6 +100,21 @@ namespace Individuell.DAL
             catch
             {
                 return false;
+            }
+        }
+
+        public async Task<List<Kontakter>> HentKontakt()
+        {
+            try
+            {
+
+                List<Kontakter> alleKontakt = await _db.Kontakter.ToListAsync();
+                return alleKontakt;
+
+            }
+            catch
+            {
+                return null;
             }
         }
 

@@ -32,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\alleKontakt\alleKontakt.ts" />
     <None Remove="ClientApp\src\app\app-routing.module.ts" />
     <None Remove="ClientApp\src\app\FAQ.ts" />
     <None Remove="ClientApp\src\app\liste\liste.ts" />

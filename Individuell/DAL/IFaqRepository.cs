@@ -15,5 +15,7 @@ namespace Individuell.DAL
         Task<bool> LagreMelding(Kontakt innMelding);
 
         Task<bool> Rating(NorWayFAQ endreRating);
+
+        Task<List<Kontakter>> HentKontakt();
     }
 }
