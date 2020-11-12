@@ -39,7 +39,9 @@ namespace Individuell.DAL
                 FAQ temaen = await _db.FAQer.FindAsync(id);
                 List<NorWayFAQ> alleSpm = new List<NorWayFAQ>();
 
-                    foreach (var spm in temaen.Sporsmaler)
+                var order = temaen.Sporsmaler.OrderByDescending(r => r.Positiv);
+
+                    foreach (var spm in order)
                     {
                         var enSpm = new NorWayFAQ()
                         {

@@ -1,4 +1,15 @@
-<app-nav-meny></app-nav-meny>
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
+<body>
+  <div [ngStyle]="{backgroundImage:'linear-gradient(rgba(255,255,255,0) 84%,
+       rgba(255,255,255,1) 100%),url(assets/bilde/oslo-by-night-foap-visitnorwaycom.jpg)'}" class="img-fluid"
+    style="height: 60.5em;
+    background-repeat: no-repeat;
+    background-size: cover;">
+
+    <app-nav-meny></app-nav-meny>
+
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</body>
+

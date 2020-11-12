@@ -12,12 +12,15 @@ export class SpmList {
   allSpm: Array<FAQ>;
   selectId: number;
   select: boolean;
+  saveTemaId: number;
+  ratingClicked: boolean;
 
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.visSpmList(params.id);
+      this.saveTemaId = params.id;
       this.laster = true;
       this.select = false;
     })
@@ -36,6 +39,7 @@ export class SpmList {
   spmSelect(id: number) {
     this.select = true;
     this.selectId = id;
+    this.ratingClicked = false;
   }
 
  
@@ -60,16 +64,11 @@ export class SpmList {
     this.http.put("api/FAQ/", endreLike)
       .subscribe(
         retur => {
-          console.log("ok")
-          //this.router.navigate(['/spmList', id]);
-          //this.ngOnInit();
+          const temaID = this.saveTemaId;
+          this.visSpmList(temaID);
+          this.ratingClicked = true;
         },
         error => console.log(error)
       );
-    //const increase = like.textContent;
-    //const newnumber = increase + 1;
-    //console.log(positiv + 1)
-
-
   }
 }
