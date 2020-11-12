@@ -42,7 +42,6 @@ namespace Individuell
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //DBInit.Seed(app);
                 loggerFactory.AddFile("Logs/FaqLog.txt");
             }
             else
