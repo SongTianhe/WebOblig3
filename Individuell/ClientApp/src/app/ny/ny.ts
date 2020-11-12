@@ -18,7 +18,7 @@ export class Ny {
       null, Validators.compose([Validators.required, Validators.pattern("[a-zA-ZøæåØÆÅ\\-. ]{2,10}")])
     ],
     epost: [
-      null, Validators.compose([Validators.required, Validators.pattern("^[a-zA-ZøæåØÆÅ0-9._%+-]+@[a-zA-ZøæåØÆÅ0-9.-]+\\.[a-z]{2,4}$")])
+      null, Validators.compose([Validators.required, Validators.maxLength(30), Validators.pattern("^[a-zA-ZøæåØÆÅ0-9._%+-]+@[a-zA-ZøæåØÆÅ0-9.-]+\\.[a-z]{2,4}$")])
     ],
     melding: [
       null, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(500)])

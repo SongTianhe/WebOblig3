@@ -39,11 +39,13 @@ namespace Individuell.DAL
                 FAQ temaen = await _db.FAQer.FindAsync(id);
                 List<NorWayFAQ> alleSpm = new List<NorWayFAQ>();
 
+                //Sorter alle spørsmål ved "positiv", spørsmålet som har bedre vurdering hent ut først
                 var order = temaen.Sporsmaler.OrderByDescending(r => r.Positiv);
 
                     foreach (var spm in order)
                     {
-                        var enSpm = new NorWayFAQ()
+                    //Erklære at NorWayFAQ og id er id-en for spørsmålet, slike at kan bruk id-en til å hente det valgte spørsmålet etterpå.
+                    var enSpm = new NorWayFAQ()
                         {
                             Id = spm.SId,
                             Tema = temaen.Tema,

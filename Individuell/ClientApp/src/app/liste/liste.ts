@@ -8,14 +8,11 @@ import { FAQ } from "../FAQ";
 })
 export class Liste {
   allTema: Array<FAQ>;
-  allSpm: Array<FAQ>;
   laster: boolean;
-  visTema: boolean;
 
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
-    this.visTema = true;
     this.laster = true;
     this.hentAlleTema();
   }
@@ -29,11 +26,4 @@ export class Liste {
         error => console.log(error)
       );
   };
-
-  temaSelect(id: number) {
-    this.http.get<FAQ[]>("api/FAQ/" + id)
-      .subscribe(spm => {
-        this.allSpm = spm;
-      })
-  }
 }

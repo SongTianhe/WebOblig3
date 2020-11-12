@@ -42,11 +42,13 @@ export class SpmList {
     this.ratingClicked = false;
   }
 
- 
-  rating(id: number, positiv: number, negativ:number, type: string) {
+  rating(id: number, positiv: number, negativ: number, type: string) {
+
     const endreLike = new FAQ();
 
+    //sjekk hvilken knapp som ble klikket på
     if (type == "like") {
+      //Legg en til det opprinnelige nummeret
       const nyTall = positiv + 1;
 
       endreLike.id = id;
@@ -64,6 +66,7 @@ export class SpmList {
     this.http.put("api/FAQ/", endreLike)
       .subscribe(
         retur => {
+          //saveTemaId lagret id-en som ble sendt inn første, som er id-en til tema
           const temaID = this.saveTemaId;
           this.visSpmList(temaID);
           this.ratingClicked = true;

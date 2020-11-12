@@ -32,7 +32,7 @@
       </div>
       <div class="form-group">
         <input type="submit" [disabled]="!skjema.valid" class="btn btn-primary" value="Send" />
-        <span [hidden]="skjema.valid" class="text-danger">Kan ikke send, sjekk hvis alle input er gyldig!</span>
+        <p class="alert alert-warning" [hidden]="skjema.valid">Kan ikke send, sjekk hvis alle input er gyldig!</p>
       </div>
     </form>
   </div>
